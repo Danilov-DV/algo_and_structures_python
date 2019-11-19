@@ -9,3 +9,24 @@
 Также сообщать пользователю о невозможности деления на ноль,
 если он ввел 0 в качестве делителя.
 """
+
+while True:
+    USER_INPUT = input("введите знак операции '+', '-', '*', '/', '0' - выход ")
+    if  USER_INPUT == "+" or USER_INPUT == "-" or USER_INPUT == "*" or USER_INPUT == "/":
+        VAR1 = int(input("первое число "))
+        VAR2 = int(input("второе число "))
+        if USER_INPUT == "+":
+            print(VAR1 + VAR2)
+        elif USER_INPUT == "-":
+            print(VAR1 - VAR2)
+        elif USER_INPUT == "*":
+            print(VAR1 * VAR2)
+        elif USER_INPUT == "/":
+            if VAR2 == 0:
+                print("деление на ноль")
+            else:
+                print(VAR1 / VAR2)
+    elif USER_INPUT == "0":
+        break
+    else:
+        print("ошибка ввода")

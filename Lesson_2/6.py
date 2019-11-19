@@ -5,3 +5,26 @@
 число, чем то, что загадано. Если за 10 попыток число не отгадано,
 то вывести загаданное число.
 """
+
+
+from random import random
+
+
+NUM = int(random() * 100)
+print(NUM)
+CNT = 0
+
+while True:
+    VAR = int(input("Угадай число "))
+    CNT += 1
+    if CNT == 10:
+        print(f"10 попыток. число было - {NUM}")
+        break
+    else:
+        if VAR < NUM:
+            print("Загаданное число больше")
+        elif VAR > NUM:
+            print("Загаданное число меньше")
+        else:
+            print("Угадал!")
+            break

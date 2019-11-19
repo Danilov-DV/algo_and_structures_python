@@ -3,3 +3,21 @@
  последовательности чисел. Количество вводимых чисел и цифра,
  которую необходимо посчитать, задаются вводом с клавиатуры.
 """
+
+
+N = int(input("Количество вводимых чисел "))
+NUM = int(input("Цифра "))
+CNT = 0
+
+
+for I in range(N):
+    VAR_INT = int(input(f"{I+1} число "))
+    while True:
+        if VAR_INT > 0:
+            if NUM == VAR_INT % 10:
+                CNT += 1
+            VAR_INT = VAR_INT // 10
+        else:
+            break
+
+print(CNT)

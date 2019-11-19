@@ -3,3 +3,22 @@
 натуральных чисел выполняется равенство: 1+2+...+n = n(n+1)/2,
  где n - любое натуральное число.
 """
+
+N = int(input("n - любое натуральное число "))
+
+SUM = 0
+
+for i in range(1, N+1):
+    SUM += i
+
+print(SUM)
+print(N * (N + 1) / 2)
+
+
+def my_func(n):
+    if n == 1:
+        return 1
+    return n + my_func(n-1)
+
+
+print(my_func(N))
