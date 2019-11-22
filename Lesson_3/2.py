@@ -5,3 +5,19 @@
 (или 0, 3, 4, 5 - если индексация начинается с нуля),
 т.к. именно в этих позициях первого массива стоят четные числа.
 """
+
+
+from random import randint
+
+
+NUMS = []
+IND = []
+for i in range(10):
+    n = randint(0, 50)
+    NUMS.append(n)
+    if n % 2 == 0:
+        IND.append(i)
+
+
+print(NUMS)
+print(IND)
